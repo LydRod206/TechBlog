@@ -2,8 +2,8 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const path = require('path');
+const { Comment, Post, User } = require('./models');
 const routes = require('./routes');
-const db = require('./config/db');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
