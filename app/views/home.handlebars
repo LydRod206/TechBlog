@@ -1,0 +1,41 @@
+<h1>Blog Posts!</h1>
+
+{{#each allPosts}}
+  <div class="card">
+    <div class="card-header">
+      {{title}}
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>{{content}}</p>
+        <footer class="blockquote-footer">{{user.username}} on {{date_created}}</footer>
+      </blockquote>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Add Comment
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Form for new comment</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group">
+                <span class="input-group-text">Comment text</span>
+                <textarea id="comment-content" class="form-control" aria-label="With textarea"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button data-postID="{{id}}" id="addComment" type="button" class="btn btn-primary">Add comment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{> comments}}
+    </div>
+  </div>
+{{/each}}
+
+<script src="../controllers/homeController.js"></script>
