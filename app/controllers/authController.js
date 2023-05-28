@@ -1,4 +1,4 @@
-const { Users } = require('../models/User');
+const { Users } = require('../models/Users');
 
 // Handle user signup
 const signup = async (req, res) => {
@@ -15,7 +15,7 @@ const signup = async (req, res) => {
 const login = async (req, res) => {
   try {
     const { username, password } = req.body;
-    const user = await User.findOne({ where: { username } });
+    const user = await Users.findOne({ where: { username } });
     if (!user) {
       res.status(401).json({ success: false, message: 'Invalid username or password' });
       return;
