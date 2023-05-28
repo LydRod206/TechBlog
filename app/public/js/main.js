@@ -228,4 +228,45 @@ const checkLoginStatus = () => {
   
   checkLoginStatus();
   
+  // Function to handle adding a comment
+function addComment() {
+  // Get the comment text from the input field
+  var commentText = document.getElementById('comment-content').value;
   
+  // Create a new comment element
+  var commentElement = document.createElement('div');
+  commentElement.classList.add('comment');
+  commentElement.innerHTML = '<p>' + commentText + '</p>';
+  
+  // Append the comment element to the comments container
+  var commentsContainer = document.getElementById('comments-container');
+  commentsContainer.appendChild(commentElement);
+  
+  // Clear the comment input field
+  document.getElementById('comment-content').value = '';
+}
+
+// Function to handle adding a post
+function addPost() {
+  // Get the post title and content from the input fields
+  var postTitle = document.getElementById('post-title').value;
+  var postContent = document.getElementById('post-content').value;
+  
+  // Create a new post element
+  var postElement = document.createElement('div');
+  postElement.classList.add('post');
+  postElement.innerHTML = '<h2>' + postTitle + '</h2>' +
+                          '<p>' + postContent + '</p>';
+  
+  // Append the post element to the posts container
+  var postsContainer = document.getElementById('posts-container');
+  postsContainer.appendChild(postElement);
+  
+  // Clear the post input fields
+  document.getElementById('post-title').value = '';
+  document.getElementById('post-content').value = '';
+}
+
+// Add event listeners
+document.getElementById('add-comment-btn').addEventListener('click', addComment);
+document.getElementById('add-post-btn').addEventListener('click', addPost);

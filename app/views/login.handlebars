@@ -1,15 +1,23 @@
-<h3>Login</h3>
+<h3 class="display-4">Login</h3>
 <form id="login-form">
-  <input type="text" placeholder="Username" id="login-username" required>
-  <input type="password" placeholder="Password" id="login-password" required>
-  <button type="submit">Login!</button>
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Username" id="login-username" required>
+  </div>
+  <div class="mb-3">
+    <input type="password" class="form-control" placeholder="Password" id="login-password" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Login!</button>
 </form>
 
-<h3>Signup</h3>
+<h3 class="display-4">Signup</h3>
 <form id="signup-form">
-  <input type="text" placeholder="Username" id="signup-username" required>
-  <input type="password" placeholder="Password" id="signup-password" required>
-  <button type="submit">Signup!</button>
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Username" id="signup-username" required>
+  </div>
+  <div class="mb-3">
+    <input type="password" class="form-control" placeholder="Password" id="signup-password" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Signup!</button>
 </form>
 
 <script src="../controllers/authController.js"></script>

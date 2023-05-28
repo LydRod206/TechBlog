@@ -1,47 +1,39 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Comment extends Model {
-  // Define custom methods or associations here
-}
+class Comment extends Model {}
 
-Comment.init({
-  // Define model attributes
-  id: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    autoIncrement: true,
-    allowNull: false,
-  },
-  content: {
-    type: DataTypes.TEXT,
-    allowNull: false,
-  },
-  createdAt: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: DataTypes.NOW,
-  },
-  // Define foreign keys
-  userId: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    references: {
-      model: 'Users',
-      key: 'id',
+Comment.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+      allowNull: false,
+    },
+    content: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    postId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'posts',
+        key: 'id',
+      },
     },
   },
-  postId: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    references: {
-      model: 'Posts',
-      key: 'id',
-    },
-  },
-}, {
-  sequelize,
-  modelName: 'Comment',
+  {
+    sequelize,
+    modelName: 'Comment',
+    tableName: 'comments',
+  }
+);
+
+// Define association between Comment and Post models
+Comment.belongsTo(Post, {
+  foreignKey: 'postId',
 });
 
 module.exports = Comment;

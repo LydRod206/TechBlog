@@ -5,7 +5,6 @@ const { authController, dashboardController, homeController, postController } = 
 // Home routes
 router.get('/', homeController.getHomePage);
 router.get('/posts/:id',homeController.getPostById);
-
 // Auth routes
 router.post('/signup', authController.signup);
 router.post('/login', authController.login);
