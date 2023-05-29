@@ -1,49 +1,23 @@
-<html>
-<head>
-    <title>{{title}}</title>
-</head>
-<body>
-    <header>
-        {{> header}}
-    </header>
+<h3 class="display-4">Login</h3>
+<form id="login-form">
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Username" id="login-username" required>
+  </div>
+  <div class="mb-3">
+    <input type="password" class="form-control" placeholder="Password" id="login-password" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Login!</button>
+</form>
 
-    <main>
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="text-center">Sign Up</h2>
-                        </div>
-                        <div class="card-body">
-                            <form action="/signup" method="POST">
-                                <div class="mb-3">
-                                    <label for="username" class="form-label">Username</label>
-                                    <input type="text" class="form-control" id="username" name="username" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="password" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="password" name="password" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="confirmPassword" class="form-label">Confirm Password</label>
-                                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-primary">Sign Up</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+<h3 class="display-4">Signup</h3>
+<form id="signup-form">
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Username" id="signup-username" required>
+  </div>
+  <div class="mb-3">
+    <input type="password" class="form-control" placeholder="Password" id="signup-password" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Signup!</button>
+</form>
 
-    <footer>
-        {{> footer}}
-    </footer>
-
-    <script src="main.js"></script>
-</body>
-</html>
+<script type="application/x-javascript" src="/app/controllers/authController.js"></script>

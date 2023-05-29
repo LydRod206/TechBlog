@@ -36,6 +36,7 @@ connect-session-sequelize: A Sequelize session store for Express.js, used to sto
 mysql2: A MySQL database driver for Node.js.
 nodemon: A development tool that monitors changes in the source code and automatically restarts the server.
 bootstrap: A popular CSS framework for building responsive and visually appealing websites.
+mime: (Multipurpose Internet Mail Extensions) is a standard that defines the types of files based on their content and helps browsers and servers understand how to handle and interpret those files.
 
 3. Set up the configuration:
 
