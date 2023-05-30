@@ -17,6 +17,6 @@ router.delete('/dashboard/posts/:id', dashboardController.deletePost);
 router.put('/dashboard/posts/:id', dashboardController.updatePost);
 
 // Post routes
-router.post('/posts/:id/comments', postController);
+router.post('/posts/:id/comments', postController.createComment);
 
 module.exports = router;

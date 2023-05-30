@@ -8,7 +8,7 @@ const handleLogin = async (event) => {
       password,
     };
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch('/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ const handleLogin = async (event) => {
       password,
     };
     try {
-      const response = await fetch('/api/signup', {
+      const response = await fetch('/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const handleLogin = async (event) => {
     };
   
     try {
-      const response = await fetch('/api/posts', {
+      const response = await fetch('/posts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ const handleUpdatePost = (event, postId) => {
     event.preventDefault();
     const updatedTitle = document.getElementById(`post-title-${postId}`).value;
     const updatedContent = document.getElementById(`post-content-${postId}`).value;
-    fetch(`/api/posts/${postId}`, {
+    fetch(`/posts/${postId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -123,7 +123,7 @@ const handleUpdatePost = (event, postId) => {
   
   // Function to handle deleting a blog post
   const handleDeletePost = (postId) => {
-    fetch(`/api/posts/${postId}`, {
+    fetch(`/posts/${postId}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -146,7 +146,7 @@ const handleUpdatePost = (event, postId) => {
   const handleAddComment = (event, postId) => {
     event.preventDefault();
     const comment = document.getElementById(`comment-${postId}`).value;
-    fetch(`/api/posts/${postId}/comments`, {
+    fetch(`/posts/${postId}/comments`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -168,7 +168,7 @@ const handleUpdatePost = (event, postId) => {
   
   // Function to handle user logout
   const handleLogout = () => {
-    fetch('/api/logout', {
+    fetch('/logout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

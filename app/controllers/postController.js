@@ -3,7 +3,7 @@ const router = express.Router();
 const { Comment } = require('../models'); 
 
 // Create a new comment for a post
-router.post('/posts/:id/comments', async (req, res) => {
+const createComment = async (req, res) => {
   try {
     const postId = req.params.id;
     // Get the comment data from the request body
@@ -17,6 +17,8 @@ router.post('/posts/:id/comments', async (req, res) => {
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
   }
-});
+};
 
-module.exports = router;
+module.exports = {
+  createComment,
+};
