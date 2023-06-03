@@ -4,7 +4,6 @@ const sequelize = require('../config/connection');
 class Post extends Model {}
 
 Post.init({
-  // Define model attributes
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -24,7 +23,6 @@ Post.init({
     allowNull: false,
     defaultValue: DataTypes.NOW,
   },
-  // Define foreign key
   userId: {
     type: DataTypes.INTEGER,
     allowNull: false,
@@ -34,8 +32,10 @@ Post.init({
     },
   },
 }, {
-  sequelize,
-  modelName: 'Post',
+      sequelize,
+      freezeTableName: true,
+      underscored: true,
+      modelName: 'Post',
 });
 
 module.exports = Post;
