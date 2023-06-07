@@ -26,6 +26,7 @@ app.use(express.static(path.join( 'public')));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+
 const allRoutes = require('./controllers/api/index.js');
 app.use('/', allRoutes);
 
