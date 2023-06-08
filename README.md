@@ -45,7 +45,7 @@ Modify the environment variables in the `.env` file according to your setup.
 
 4. Start the application:
 
-5. Access the application at `http://localhost:3000` in your web browser.
+5. Access the application at `http://localhost:3001` in your web browser.
 
 ## Usage
 
