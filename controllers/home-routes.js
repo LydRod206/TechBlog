@@ -1,5 +1,5 @@
 
-const { Post, User, Comment } = require('../../models');
+const { Post, User, Comment } = require('../models');
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
@@ -26,7 +26,9 @@ router.get('/', (req, res) => {
         })
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({ plain: true }));
-            res.render('layouts/main', { posts, loggedIn: req.session.loggedIn });
+            console.log(req.session.loggedIn);
+            console.log(req.session);
+            res.render('home', { posts, loggedIn: req.session.loggedIn });
         })
         .catch(err => {
             console.log(err);
@@ -39,6 +41,8 @@ router.get('/login', (req, res) => {
         res.redirect('/');
         return;
     }
+    console.log(req.session.loggedIn);
+    console.log(req.session);
     res.render('login');
 });
 

@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { Post, User, Comment } = require('../../models');
-const withAuth = require('../../utils/auth');
+const { Post, User, Comment } = require('../models');
+const withAuth = require('../utils/auth');
 
 
 router.get('/dashboard', withAuth, (req, res) => {
@@ -30,7 +30,7 @@ router.get('/dashboard', withAuth, (req, res) => {
         })
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({ plain: true }));
-            res.render('dashboard', { posts, loggedIn: true });
+            res.render('dashboard', { posts, loggedIn: req.session.loggedIn});
         })
         .catch(err => {
             console.log(err);

@@ -1,7 +1,7 @@
 :root {
-    --primary: #333;
+    --primary: #19e8d7;
     --secondary: #555;
-    --tertiary: #888;
+    --tertiary: #680b72;
     --light-dark: #ddd;
     --dark: #222;
     --border-radius: 0.5rem;
@@ -12,7 +12,7 @@
   }
   
   body {
-    background-color: var(--primary);
+    background-color: var(--primary); 
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
