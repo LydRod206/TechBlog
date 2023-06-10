@@ -11,7 +11,8 @@
     
 </head>
 <body>
-    <header>
+    <div class="wrapper">
+    <header class="navbar">
         <nav>
         <ul>
             <li><a href="/">Home</a></li>
@@ -25,7 +26,7 @@
             {{/if}}
             
         </ul>
-    </nav>
+        </nav>
     </header>
 
     <main>
@@ -35,8 +36,10 @@
     <footer>
         <p>&copy; 2023 Tech Blog. All rights reserved.</p>
     </footer>
-{{#if loggedIn}}
+
+    {{#if loggedIn}}
     <script src="/js/logout.js"></script>
     {{/if}}
+
 </body>
 </html>

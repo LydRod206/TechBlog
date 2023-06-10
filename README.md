@@ -56,3 +56,10 @@ Tech Blog provides a platform for users to create, view, and comment on blog pos
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
+![Screenshot 2023-06-10 at 10 43 40 AM](https://github.com/LydRod206/TechBlog/assets/119384486/1e18dc58-4d6c-4829-8ae7-2c2ebf5c83b4)
+
+
+![Screenshot 2023-06-10 at 10 43 08 AM](https://github.com/LydRod206/TechBlog/assets/119384486/c7f0b453-03f3-44cf-b8ab-3252dd7d5115)
+
+
+![Screenshot 2023-06-10 at 10 42 51 AM](https://github.com/LydRod206/TechBlog/assets/119384486/ba887201-0158-4616-8dca-399ab387742d)
